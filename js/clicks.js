@@ -6,10 +6,10 @@ export let stopToggle = false;
 export function Click() {
     for (let i = 0; i < size; i++) {
 
-        let thumb = document.getElementById('divImg' + i);
+        let thumb = document.querySelector('#divImg' + i);
         let video = document.querySelector('#vid' + i);
-        let closeBtn = document.getElementById('closeId' + i);
-        let labelVideo = document.getElementById('label' + i);
+        let closeBtn = document.querySelector('#closeId' + i);
+        let labelVideo = document.querySelector('#label' + i);
         let footer = document.querySelector('.footer');
 
 
@@ -18,8 +18,8 @@ export function Click() {
 
                 for (let i = 0; i < size; i++) {
                     let video2 = document.querySelector('#vid' + i);
-                    let closeBtn2 = document.getElementById('closeId' + i)
-                    let labelVideo2 = document.getElementById('label' + i);
+                    let closeBtn2 = document.querySelector('#closeId' + i)
+                    let labelVideo2 = document.querySelector('#label' + i);
 
 
                     if (video2.classList.contains('hide')) {
@@ -43,7 +43,7 @@ export function Click() {
                 document.body.scroll = "no"; // IE
                 video.play();
                 for (let i = 0; i < size; i++) {
-                    let thumb2 = document.getElementById('thmb' + i);
+                    let thumb2 = document.querySelector('#thmb' + i);
                     thumb2.classList.add('thumb2');
                 }
             }
@@ -53,10 +53,10 @@ export function Click() {
     }
 
     for (let i = 0; i < size; i++) {
-        let thumb = document.getElementById('divImg' + i);
+        let thumb = document.querySelector('#divImg' + i);
         let video = document.querySelector('#vid' + i);
-        let closeBtn = document.getElementById('closeId' + i);
-        let labelVideo = document.getElementById('label' + i);
+        let closeBtn = document.querySelector('#closeId' + i);
+        let labelVideo = document.querySelector('#label' + i);
         let footer = document.querySelector('.footer');
 
         closeBtn.addEventListener('click', () => {
@@ -66,7 +66,7 @@ export function Click() {
             document.documentElement.style.overflow = 'auto';
             document.body.scroll = "yes"; // IE
             for (let l = 0; l < size; l++) {
-                let thumb2 = document.getElementById('thmb' + l);
+                let thumb2 = document.querySelector('#thmb' + l);
                 thumb2.classList.remove('thumb2');
                 closeBtn.classList.add('hide');
                 labelVideo.classList.add('hide');
@@ -78,7 +78,7 @@ export function Click() {
     }
 
     function ClarearDiv(y) {
-        let description = document.getElementById(y);
+        let description = document.querySelector('#' + y);
         description.classList.add('hide');
     }
 }

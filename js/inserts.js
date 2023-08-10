@@ -54,10 +54,10 @@ function InsertImg(imgUrl, imgId, divImgId, x, y) {
     div.onmouseenter = () => { Escurecer(x, y); };
     div.onmouseleave = () => { Clarear(x, y); };
 
-    let thumbSection = document.getElementById('thumbContainer');
+    let thumbSection = document.querySelector('#thumbContainer');
     thumbSection.appendChild(div);
 
-    let divSelection = document.getElementById(divImgId);
+    let divSelection = document.querySelector('#' +divImgId);
     divSelection.appendChild(img);
 }
 
@@ -82,10 +82,10 @@ function InsertVid(vidUrl, vidId, divVidId, closeId) {
     div.id = divVidId;
     div.className = 'divVid';
 
-    let thumbSection = document.getElementById('thumbContainer');
+    let thumbSection = document.querySelector('#thumbContainer');
     thumbSection.appendChild(div);
 
-    let divSelection = document.getElementById(divVidId);
+    let divSelection = document.querySelector('#' +divVidId);
     divSelection.appendChild(vid);
     divSelection.appendChild(close);
 }
@@ -104,9 +104,9 @@ function InsertDiv(divId, divType, divTitle, divClient, divImg) {
     let client = document.createElement('h6');
     client.innerText = divClient;
 
-    let divImgSection = document.getElementById(divImg);
+    let divImgSection = document.querySelector('#' +divImg);
     divImgSection.appendChild(div);
-    let divSelection = document.getElementById(divId);
+    let divSelection = document.querySelector('#' +divId);
     divSelection.append(type);
     divSelection.append(title);
     divSelection.append(client);
@@ -126,9 +126,9 @@ function InsertDivLabel(labelId, divType, divTitle, divClient, divVidId) {
     let client = document.createElement('h6');
     client.innerText = divClient;
 
-    let divVidSelection = document.getElementById(divVidId);
+    let divVidSelection = document.querySelector('#' +divVidId);
     divVidSelection.appendChild(divVid);
-    let newDiv = document.getElementById(labelId);
+    let newDiv = document.querySelector('#' +labelId);
     newDiv.append(type);
     newDiv.append(title);
     newDiv.append(client);
@@ -136,8 +136,8 @@ function InsertDivLabel(labelId, divType, divTitle, divClient, divVidId) {
 
 function Escurecer(x, y) {
     if (stopToggle === false) {
-        let thumb = document.getElementById(x);
-        let description = document.getElementById(y);
+        let thumb = document.querySelector('#' +x);
+        let description = document.querySelector('#' +y);
         thumb.classList.add('thumb2');
         description.classList.remove('hide');
     }
@@ -146,8 +146,8 @@ function Escurecer(x, y) {
 function Clarear(x, y) {
 
     if (stopToggle === false) {
-        let thumb = document.getElementById(x);
-        let description = document.getElementById(y);
+        let thumb = document.querySelector('#' +x);
+        let description = document.querySelector('#' +y);
         thumb.classList.remove('thumb2');
         description.classList.add('hide');
     }

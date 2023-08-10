@@ -1,11 +1,11 @@
 
 export default function Menu() {
-    let workBtn = document.getElementById('jobsBtn');
-    let aboutBtn = document.getElementById('aboutBtn');
-    let contactsBtn = document.getElementById('contactsBtn');
-    let work = document.getElementById('thumbContainer');
-    let about = document.getElementById('about');
-    let contacts = document.getElementById('contacts');
+    let workBtn = document.querySelector('#jobsBtn');
+    let aboutBtn = document.querySelector('#aboutBtn');
+    let contactsBtn = document.querySelector('#contactsBtn');
+    let work = document.querySelector('#thumbContainer');
+    let about = document.querySelector('#about');
+    let contacts = document.querySelector('#contacts');
 
     workBtn.addEventListener('click', () => {
         work.classList.remove('hide');
