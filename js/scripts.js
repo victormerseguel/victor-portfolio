@@ -1,11 +1,9 @@
-import { PrintWorkTime, FooterYear} from "./dates.js";
+import { PrintWorkTime, FooterYear } from "./dates.js";
 import Menu from "./menu.js";
-import Insert from "./inserts.js";
-import { Click } from "./clicks.js";
-
+import { Insert } from "./inserts.js";
 
 Insert();
-Click();
+// Click();
 Menu();
 PrintWorkTime();
 FooterYear();
